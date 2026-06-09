@@ -38,18 +38,18 @@ F_SQUIRREL = 1.0 - F_MOUSE - F_OPOSSUM
 valid_mask = F_SQUIRREL >= 0
 
 p_eff = (F_MOUSE * kappa_mouse+ F_SQUIRREL * kappa_squirrel+ F_OPOSSUM * kappa_opossum)
-beta_eff = a_feed * p_eff
-beta_eff_masked = np.ma.masked_where(~valid_mask, beta_eff)
+beta_va = a_feed * p_eff
+beta_va_masked = np.ma.masked_where(~valid_mask, beta_va)
 fig, ax = plt.subplots(
     figsize=(FIG_WIDTH_IN, FIG_HEIGHT_IN),
     constrained_layout=True
 )
 ax.set_facecolor("0.92")
-levels = np.linspace(float(beta_eff_masked.min()),float(beta_eff_masked.max()), 21)
+levels = np.linspace(float(beta_va_masked.min()),float(beta_va_masked.max()), 21)
 
-contour = ax.contourf(F_MOUSE, F_OPOSSUM, beta_eff_masked,levels=levels, cmap="RdYlBu_r",alpha=0.95)
+contour = ax.contourf(F_MOUSE, F_OPOSSUM, beta_va_masked,levels=levels, cmap="RdYlBu_r",alpha=0.95)
 
-contour_lines = ax.contour(F_MOUSE, F_OPOSSUM, beta_eff_masked, levels=np.linspace(0.10, 0.90, 9), colors="0.25", linewidths=0.45, alpha=0.75)
+contour_lines = ax.contour(F_MOUSE, F_OPOSSUM, beta_va_masked, levels=np.linspace(0.10, 0.90, 9), colors="0.25", linewidths=0.45, alpha=0.75)
 
 ax.clabel(contour_lines, inline=True, fontsize=9, fmt="%.2f")
 
