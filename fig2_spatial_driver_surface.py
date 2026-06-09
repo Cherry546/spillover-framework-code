@@ -62,12 +62,12 @@ Q = normalize(Q)
 
 
 beta_0 = 1.0
-omega_L = 0.7
+w_L = 0.7
 kappa = 5.0
 alpha = 2.0
 
 
-spatial_driver_term = M * (1.0 + omega_L * L)
+spatial_driver_term = M * (1.0 + w_L * L)
 Q_term = 1.0 - np.exp(-kappa * Q)
 A_H_filter_raw = A_H * np.exp(-alpha * A_H)
 A_H_filter = normalize(A_H_filter_raw)
