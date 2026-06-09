@@ -84,8 +84,8 @@ for spine in ax.spines.values():
 save_dir = Path("outputs") / "figures"
 save_dir.mkdir(parents=True, exist_ok=True)
 
-png_path = save_dir / "fig3_lyme_acquisition_component.png"
-tif_path = save_dir / "fig3_lyme_acquisition_component.tif"
-pdf_path = save_dir / "fig3_lyme_acquisition_component.pdf"
-eps_path = save_dir / "fig3_lyme_acquisition_component.eps"
+png_path = save_dir / "fig4_lyme_acquisition_component.png"
+tif_path = save_dir / "fig4_lyme_acquisition_component.tif"
+pdf_path = save_dir / "fig4_lyme_acquisition_component.pdf"
+eps_path = save_dir / "fig4_lyme_acquisition_component.eps"
 
