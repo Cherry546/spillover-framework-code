@@ -30,11 +30,11 @@ Run the following commands from the repository root directory:
 
 
 
-python scripts/fig2\_spatial\_driver\_surface.py
+python fig2\_spatial\_driver\_surface.py
 
-python scripts/fig3\_lyme\_acquisition\_component.py
+python fig4\_lyme\_acquisition\_component.py
 
-python scripts/fig5\_movement\_overlap.py
+python fig5\_movement\_overlap.py
 
 
 
