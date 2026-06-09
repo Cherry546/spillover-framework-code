@@ -26,17 +26,12 @@ def normalize(arr, eps=1e-12):
     arr_min, arr_max = arr.min(), arr.max()
     return (arr - arr_min) / (arr_max - arr_min + eps)
 
-
-
-# (a) Human activity A_H(x)
 A_H_raw = (
     1.0 * np.exp(-((X - 2) ** 2 + (Y - 2) ** 2) / 15)
     + 0.6 * np.exp(-((X - 8) ** 2 + (Y - 8) ** 2) / 12)
 )
 A_H = normalize(A_H_raw)
 
-
-# (b) Land use context L(x)
 L_noise = np.random.rand(grid_size, grid_size)
 L = gaussian_filter(L_noise, sigma=8)
 L = normalize(L)
@@ -50,15 +45,11 @@ urban_mask = np.clip(urban_mask, 0, 1)
 L = L * (1 - urban_mask)
 L = normalize(L)
 
-
-# (c) Local interface intensity M(x)
 dLy, dLx = np.gradient(L, dy, dx)
 M = np.sqrt(dLx ** 2 + dLy ** 2)
 M = gaussian_filter(M, sigma=1.5)
 M = normalize(M)
 
-
-# (d) Three resource patches in contrasting landscape settings
 Q_raw = np.zeros((grid_size, grid_size))
 
 Q_raw[20:35, 20:35] = 1.0
