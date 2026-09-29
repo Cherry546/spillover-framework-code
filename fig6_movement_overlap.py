@@ -219,7 +219,7 @@ save_dir = Path.home() / "Desktop"
 if not save_dir.exists():
     save_dir = Path.cwd()
 
-png_path = save_dir / "Figure6.png"
+png_path = save_dir / "fig6.png"
 
 
 fig.savefig(png_path, dpi=600, bbox_inches="tight")

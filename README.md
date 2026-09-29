@@ -35,7 +35,7 @@ Each file saves its figure and displays it using `plt.show()`.
 | Figure 3 | `fig3.png` | Desktop, if that folder exists; otherwise the current working directory |
 | Figure 4(e) | `fig4.png` | `Figure 4/` under the current working directory |
 | Figure 5 | `fig5.png` | `outputs/figures/` under the current working directory |
-| Figure 6 | `Figure6.png` | Desktop, if that folder exists; otherwise the current working directory |
+| Figure 6 | `fig6.png` | Desktop, if that folder exists; otherwise the current working directory |
 
 The Desktop location is `Path.home() / "Desktop"`. The current working directory is the notebook kernel's working directory. Output folders are created automatically; rerunning a figure replaces files with the same names.
 
