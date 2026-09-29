@@ -55,7 +55,7 @@ ax.plot(t, f_H(t), ":", color="#5B8C5A", lw=2.1,
 ax.set_xticks(np.arange(1, 13))
 ax.set_xticklabels(MONTHS, fontsize=7.5)
 ax.set_xlim(1, 13)
-ax.set_ylim(0, beta_HA(t).max() * 1.28)
+ax.set_ylim(0, beta_HZ(t).max() * 1.28)
 ax.set_xlabel("Month")
 ax.set_ylabel(r"$\beta_{\mathrm{HZ}}(t)$")
 ax.legend(frameon=False, loc="upper center", fontsize=8)
@@ -77,12 +77,12 @@ print(f"Saved PNG to: {png_path}")
 
 months = np.arange(1, 13)
 fa, fh = f_A(months), f_H(months)
-bt = beta_HA(months)
+bt = beta_HZ(months)
 
 print("\n" + " " * 12 + "".join(f"{m:>8}" for m in MONTHS))
 for label, values in [("f_A         ", fa),
                       ("f_H         ", fh),
-                      ("beta_HA(t)  ", bt)]:
+                      ("beta_HZ(t)  ", bt)]:
     print(label + "".join(f"{v:>8.3f}" for v in values))
 
 print(f"\nSeasonal contrast (max/min):"

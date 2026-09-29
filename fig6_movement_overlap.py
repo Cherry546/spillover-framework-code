@@ -234,4 +234,4 @@ for t, i in zip(snapshot_times, snapshot_idx):
     print(f"  t = {t:2d} months        {beta_rel[i]:.4f}    {envelope_rel[i]:.4f}")
 
 print(f"\nSpatial overlap peaks at t = {times[np.argmax(overlap_integral)]:.0f} months")
-print(f"beta_HA(t) peaks at       t = {times[np.argmax(beta_series)]:.0f} months")
+print(f"beta_HZ(t) peaks at       t = {times[np.argmax(beta_series)]:.0f} months")

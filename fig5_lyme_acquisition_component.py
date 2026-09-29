@@ -4,7 +4,7 @@
 # In[ ]:
 
 
-# Figure 4: Lyme disease dilution and amplification landscape
+# Figure 5: Lyme disease dilution and amplification landscape
 from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
@@ -84,8 +84,12 @@ for spine in ax.spines.values():
 save_dir = Path("outputs") / "figures"
 save_dir.mkdir(parents=True, exist_ok=True)
 
-png_path = save_dir / "fig4_lyme_acquisition_component.png"
-tif_path = save_dir / "fig4_lyme_acquisition_component.tif"
-pdf_path = save_dir / "fig4_lyme_acquisition_component.pdf"
-eps_path = save_dir / "fig4_lyme_acquisition_component.eps"
+png_path = save_dir / "fig5_lyme_acquisition_component.png"
+tif_path = save_dir / "fig5_lyme_acquisition_component.tif"
+pdf_path = save_dir / "fig5_lyme_acquisition_component.pdf"
+eps_path = save_dir / "fig5_lyme_acquisition_component.eps"
 
+for output_path in (png_path, tif_path, pdf_path, eps_path):
+    fig.savefig(output_path, dpi=EXPORT_DPI, bbox_inches="tight")
+
+plt.show()

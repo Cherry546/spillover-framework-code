@@ -72,8 +72,8 @@ alpha = 2.0
 
 
 # Interface driven spatial term.
-# If ED is zero, this term is zero.
-spatial_driver_term = ED * (1.0 + omega_L * L)
+# If M is zero, this term is zero.
+spatial_driver_term = M * (1.0 + omega_L * L)
 
 Q_term = 1.0 - np.exp(-kappa * Q)
 
@@ -137,7 +137,7 @@ panels = [
     ),
     (
         beta_HA_rel,
-        r"($\mathit{f}$) Transmission coefficient $\boldsymbol{\beta}_{\mathrm{HA}}(\mathbf{x})$",
+        r"($\mathit{f}$) Transmission coefficient $\boldsymbol{B}_{\mathrm{HA}}(\mathbf{x})$",
         "magma",
     ),
 ]
