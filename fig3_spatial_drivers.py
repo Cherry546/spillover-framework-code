@@ -137,7 +137,7 @@ panels = [
     ),
     (
         beta_HA_rel,
-        r"($\mathit{f}$) Transmission coefficient $\boldsymbol{B}_{\mathrm{HA}}(\mathbf{x})$",
+        r"($\mathit{f}$) Transmission coefficient $\boldsymbol{\beta}_{\mathrm{HA}}(\mathbf{x})$",
         "magma",
     ),
 ]
