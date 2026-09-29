@@ -33,13 +33,11 @@ Each file saves its figure and displays it using `plt.show()`.
 | --- | --- | --- |
 | Figure 2 | `fig2.png` | Desktop, if that folder exists; otherwise the current working directory |
 | Figure 3 | `fig3.png` | Desktop, if that folder exists; otherwise the current working directory |
-| Figure 4(e) | `Figure4_panel_e.png`, `.pdf`, `.tif`; `Figure4_coefficients.csv` | `Figure 4/` under the current working directory |
-| Figure 5 | `fig5_lyme_acquisition_component.png`, `.tif`, `.pdf`, `.eps` | `outputs/figures/` under the current working directory |
+| Figure 4(e) | `fig4.png` | `Figure 4/` under the current working directory |
+| Figure 5 | `fig5.png` | `outputs/figures/` under the current working directory |
 | Figure 6 | `Figure6.png` | Desktop, if that folder exists; otherwise the current working directory |
 
 The Desktop location is `Path.home() / "Desktop"`. The current working directory is the notebook kernel's working directory. Output folders are created automatically; rerunning a figure replaces files with the same names.
-
-For Figure 5, use PNG, TIFF, or PDF to retain the intended appearance of transparent elements. EPS renders transparent elements as opaque.
 
 ## License
 

@@ -84,12 +84,6 @@ for spine in ax.spines.values():
 save_dir = Path("outputs") / "figures"
 save_dir.mkdir(parents=True, exist_ok=True)
 
-png_path = save_dir / "fig5_lyme_acquisition_component.png"
-tif_path = save_dir / "fig5_lyme_acquisition_component.tif"
-pdf_path = save_dir / "fig5_lyme_acquisition_component.pdf"
-eps_path = save_dir / "fig5_lyme_acquisition_component.eps"
-
-for output_path in (png_path, tif_path, pdf_path, eps_path):
-    fig.savefig(output_path, dpi=EXPORT_DPI, bbox_inches="tight")
+fig.savefig(save_dir / "fig5.png", dpi=EXPORT_DPI, bbox_inches="tight")
 
 plt.show()

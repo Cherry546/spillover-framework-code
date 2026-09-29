@@ -59,13 +59,7 @@ fig.text(5 / 170, 55 / 60,
 output = Path("Figure 4")
 output.mkdir(exist_ok=True)
 
-for ext in ["png", "pdf", "tif"]:
-    fig.savefig(output / f"Figure4_panel_e.{ext}", dpi=600,
-                bbox_inches=None, facecolor="white")
-
-np.savetxt(output / "Figure4_coefficients.csv",
-           np.column_stack([np.arange(1, 4), M, L, Q, AH, beta]),
-           delimiter=",", header="patch,M,L,Q,A_H,beta_HZ", comments="",
-           fmt=["%d", "%.2f", "%.2f", "%.2f", "%.2f", "%.8f"])
+fig.savefig(output / "fig4.png", dpi=600,
+            bbox_inches=None, facecolor="white")
 
 plt.show()
