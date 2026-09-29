@@ -92,7 +92,7 @@ print("x =", X[max_idx], "y =", Y[max_idx])
 print("Values at maximum:")
 print("A_H =", A_H[max_idx])
 print("L =", L[max_idx])
-print("ED =", ED[max_idx])
+print("M =", M[max_idx])
 print("Q =", Q[max_idx])
 print("A_H filter raw =", A_H_filter_raw[max_idx])
 print("beta_HA relative =", beta_HA_rel[max_idx])
@@ -121,7 +121,7 @@ panels = [
         "viridis",
     ),
     (
-        ED,
+        M,
         r"($\mathit{c}$) Local interface intensity $M(\mathbf{x})$",
         "viridis",
     ),
