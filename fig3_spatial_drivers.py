@@ -30,7 +30,7 @@ A_H_raw = (
 A_H = normalize(A_H_raw)
 
 
-# (b) Land use context L(x)
+# (b) Land-use intensity L(x)
 L_noise = np.random.rand(grid_size, grid_size)
 L = gaussian_filter(L_noise, sigma=8)
 L = normalize(L)
@@ -45,7 +45,7 @@ L = L * (1 - urban_mask)
 L = normalize(L)
 
 
-# (c) Local interface intensity M(x)
+# (c) Edge density M(x)
 dLy, dLx = np.gradient(L, dy, dx)
 M = np.sqrt(dLx ** 2 + dLy ** 2)
 M = gaussian_filter(M, sigma=1.5)
@@ -117,12 +117,12 @@ panels = [
     ),
     (
         L,
-        r"($\mathit{b}$) Land use context $L(\mathbf{x})$",
+        r"($\mathit{b}$) Land-use intensity $L(\mathbf{x})$",
         "viridis",
     ),
     (
         M,
-        r"($\mathit{c}$) Local interface intensity $M(\mathbf{x})$",
+        r"($\mathit{c}$) Edge density $M(\mathbf{x})$",
         "viridis",
     ),
     (
